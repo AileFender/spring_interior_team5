@@ -28,6 +28,18 @@ public class GoodsServiceImpl implements GoodsService{
 		
 		goodsList=goodsDAO.selectGoodsList("steadyseller");
 		goodsMap.put("steadyseller",goodsList);
+		
+		goodsList=goodsDAO.selectGoodsList("homeappliances");
+		goodsMap.put("homeappliances", goodsList);
+		
+		goodsList=goodsDAO.selectGoodsList("furniture");
+		goodsMap.put("furniture", goodsList);
+		
+		goodsList=goodsDAO.selectGoodsList("kitchen");
+		goodsMap.put("kitchen", goodsList);
+		
+		goodsList=goodsDAO.selectGoodsList("housegoods");
+		goodsMap.put("housegoods", goodsList);
 		return goodsMap;
 	}
 	
@@ -49,6 +61,7 @@ public class GoodsServiceImpl implements GoodsService{
 		List goodsList=goodsDAO.selectGoodsBySearchWord(searchWord);
 		return goodsList;
 	}
+	
 	
 	
 }
