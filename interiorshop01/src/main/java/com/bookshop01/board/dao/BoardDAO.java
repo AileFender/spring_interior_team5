@@ -11,5 +11,5 @@ public interface BoardDAO {
 	
 	public List boardList()throws DataAccessException;
 	
-	
+	public BoardVO board(int boardNO)throws DataAccessException;
 }

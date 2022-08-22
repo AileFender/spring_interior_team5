@@ -20,4 +20,10 @@ public class BoardServiceImpl implements BoardService{
 		return boardList;
 	}
 
+	@Override
+	public BoardVO detailBoard(int boardNO) throws Exception {
+		BoardVO boardVO = boardDAO.board(boardNO);
+		return boardVO;
+	}
+
 }

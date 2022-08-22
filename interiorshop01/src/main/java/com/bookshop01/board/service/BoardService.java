@@ -8,5 +8,5 @@ public interface BoardService {
 
 	public List listBoard()throws Exception;
 	
-	
+	public BoardVO detailBoard(int boardNO)throws Exception;
 }

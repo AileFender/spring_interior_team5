@@ -39,7 +39,7 @@ public class MainController extends BaseController {
 		session.setAttribute("side_menu", "user");
 		Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
 		mav.addObject("goodsMap", goodsMap);
-		mav.addObject("listBoard",listBoard);
+		session.setAttribute("listBoard",listBoard);
 		return mav;
 	}
 }

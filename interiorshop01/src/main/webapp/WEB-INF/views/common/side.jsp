@@ -43,14 +43,12 @@
 </c:when>
 <c:otherwise>
 	<li>
-		<h3>국내/외 도서</h3>
+		<h3>카테고리</h3>
 		<ul>
-			<li><a href="${contextPath}/goods/goodsList.do">IT/인터넷</a></li>
-			<li><a href="#">경제/경영</a></li>
-			<li><a href="#">대학교재</a></li>
-			<li><a href="#">자기계발</a></li>
-			<li><a href="#">자연과학/공학</a></li>
-			<li><a href="#">역사/인문학</a></li>
+			<li><a href="${contextPath}/main/Home_Appliances.do">가전</a></li>
+			<li><a href="${contextPath}/main/Furniture.do">가구</a></li>
+			<li><a href="${contextPath}/main/Kitchen.do">주방</a></li>
+			<li><a href="${contextPath}/main/Housegoods.do">생활용품</a></li>
 		</ul>
 	</li>
 	<!-- <li>
@@ -73,11 +71,11 @@
 	<a href="#"><img width="190" height="163" src="${contextPath}/resources/image/n-pay.jpg"> </a>
 </div>
 <DIV id="notice">
-	<H2>공지사항</H2>
+	<H2><a href="${contextPath}/admin/board/adminBoardMain.do">-공지사항-</a></H2>
 	<UL>
 	
 	<c:forEach  var="board" items="${listBoard }">
-		<li><a href="#">${board.title}</a></li>
+		<li><a href="${contextPath}/admin/board/boardDetail.do?boardNO=${board.boardNO}">${board.title}</a></li>
 		
 	</c:forEach>
 	</ul>

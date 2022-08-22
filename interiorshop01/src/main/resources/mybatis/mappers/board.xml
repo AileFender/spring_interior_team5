@@ -19,5 +19,13 @@
     ]]>
   </select>
   
+  <select id="boardOne" resultType="boardVO">
+  	<![CDATA[
+  		SELECT boardNO, title, content, writeDate
+  		from t_shopping_board	
+  		where boardNO = #{boardNO}
+  	]]>
+  
+  </select>
   
   </mapper>

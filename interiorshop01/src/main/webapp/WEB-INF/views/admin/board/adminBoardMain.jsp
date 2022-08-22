@@ -43,7 +43,7 @@
 				 
 				</TD> 
 				<TD>
-				<strong><a href="#">${board.title }<a></a></strong> 
+				<strong><a href="${contextPath}/admin/board/boardDetail.do?boardNO=${board.boardNO}">${board.title }</a></strong> 
 				</TD>
 			 <TD >
 				   <strong>${board.content }</strong> 

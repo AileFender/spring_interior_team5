@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bookshop01.board.service.BoardService;
@@ -33,12 +34,16 @@ public class BoardControllerImpl implements BoardController{
 		return mav;
 	}
 
-	@RequestMapping(value = "common/side.do", method = RequestMethod.GET)
-	public ModelAndView listBoardCommon(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	@Override
+	@RequestMapping(value = "admin/board/boardDetail.do" , method = RequestMethod.GET)
+	public ModelAndView detailBoard(@RequestParam("boardNO")int boardNO,HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName = (String)request.getAttribute("viewName");
-		List listBoard = boardService.listBoard();
-		ModelAndView mav = new ModelAndView(viewName);
-		mav.addObject("listBoard",listBoard);
+		System.out.println(boardNO);
+		boardVO  = boardService.detailBoard(boardNO);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName(viewName);
+		mav.addObject("board", boardVO);
 		return mav;
 	}
 
