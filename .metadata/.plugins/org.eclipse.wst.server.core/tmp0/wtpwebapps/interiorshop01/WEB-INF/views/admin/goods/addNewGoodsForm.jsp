@@ -105,6 +105,10 @@
 				<select name="goods_status">
 				  <option value="bestseller"  >베스트셀러</option>
 				  <option value="steadyseller" >스테디셀러</option>
+				  <option value="homeappliances">가전</option>
+				  <option value="furniture">가구</option>
+				  <option value="kitchen">주방</option>
+				  <option value="housegoods">생활용품</option>
 				  <option value="newbook" selected >신간</option>
 				  <option value="on_sale" >판매중</option>
 				  <option value="buy_out" >품절</option>
@@ -192,3 +196,4 @@
 </center>	 
 </div>
 </form>	 
+</BODY>

@@ -67,7 +67,15 @@
            
 		
 	</TABLE>
-	
+	<c:choose>
+				<c:when test="${memberInfo.member_id == 'admin' }">
+								 <a href="${contextPath}/admin/board/addBoardForm.do"
+						class="no-underline"><br>[추가하기]</a>
+						
+				</c:when>
+				<c:otherwise>
+				</c:otherwise>
+			</c:choose>
 	
 
 </body>

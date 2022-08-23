@@ -28,4 +28,26 @@
   
   </select>
   
+  <delete id="deleteBoard" parameterType="Int">
+  	<![CDATA[
+  		DELETE from t_shopping_board	
+  		where boardNO = #{boardNO}
+  	]]>
+  </delete>
+  
+  <insert id="insertBoard" parameterType="boardVO">
+  	<![CDATA[
+  		insert into t_shopping_board(boardNO, title, content)	
+  		values(#{boardNO}, #{title}, #{content})
+  	]]>
+  </insert>
+  
+  
+  <update id="updateMember" parameterType="boardVO">
+  <![CDATA[
+  		update t_shopping_board set
+  		title = #{title}, content = #{content}	
+  		where boardNO = #{boardNO}
+  	]]>
+  </update>
   </mapper>

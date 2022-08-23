@@ -26,4 +26,23 @@ public class BoardServiceImpl implements BoardService{
 		return boardVO;
 	}
 
+	@Override
+	public int removeBoard(int boardNO) throws Exception {
+		int removeboard = boardDAO.deleteBoard(boardNO);
+		return removeboard;
+	}
+
+	@Override
+	public int addBoard(BoardVO boardVO) throws Exception {
+		int addBoard = boardDAO.insertBoard(boardVO);
+		return addBoard;
+	}
+
+	@Override
+	public int modifyBoard(BoardVO boardVO) throws Exception {
+		int modifyBoard = boardDAO.updateBoard(boardVO);
+		return modifyBoard;
+	}
+
+	
 }

@@ -37,8 +37,9 @@
 	
 			<c:choose>
 				<c:when test="${memberInfo.member_id == 'admin' }">
-								 <a href="#"
+								 <a href="${contextPath}/admin/board/modifyBoard.do"
 						class="no-underline"><br>[수정하기]</a>
+						<a href = "${contextPath}/admin/board/removeBoard.do?boardNO=${board.boardNO}" class="no-underline">[삭제하기]</a>
 				</c:when>
 				<c:otherwise>
 				</c:otherwise>

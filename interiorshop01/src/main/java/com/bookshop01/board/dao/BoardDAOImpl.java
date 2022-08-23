@@ -29,6 +29,28 @@ public class BoardDAOImpl implements BoardDAO{
 		return sqlSession.selectOne("mapper.board.boardOne", boardNO);
 	}
 
+
+	@Override
+	public int deleteBoard(int boardNO) throws DataAccessException {
+		
+		
+		return sqlSession.delete("mapper.board.deleteBoard", boardNO);
+	}
+
+
+	@Override
+	public int insertBoard(BoardVO boardVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.board.insertBoard", boardVO);
+		return result;
+	}
+
+
+	@Override
+	public int updateBoard(BoardVO boardVO) throws DataAccessException {
+		int result = sqlSession.update("mapper.board.updateBoard", boardVO);
+		return result;
+	}
+
 	
 	
 }

@@ -1,0 +1,19 @@
+package com.bookshop01.board.dao;
+
+import java.util.List;
+
+import org.springframework.dao.DataAccessException;
+
+import com.bookshop01.board.vo.BoardVO;
+
+public interface BoardDAO {
+
+	
+	public List boardList()throws DataAccessException;
+	
+	public BoardVO board(int boardNO)throws DataAccessException;
+	
+	public int deleteMember(int boardNO)throws DataAccessException;
+	
+	
+}
