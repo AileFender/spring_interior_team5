@@ -70,8 +70,10 @@
 <div id="banner">
 	<a href="#"><img width="190" height="163" src="${contextPath}/resources/image/n-pay.jpg"> </a>
 </div>
+
+
 <DIV id="notice">
-	<H2><a href="${contextPath}/admin/board/adminBoardMain.do">-공지사항-</a></H2>
+	<H2>공지사항</H2>
 	<UL>
 	
 	<c:forEach  var="board" items="${listBoard }">

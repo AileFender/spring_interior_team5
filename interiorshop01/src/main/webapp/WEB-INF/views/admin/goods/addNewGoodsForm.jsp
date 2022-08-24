@@ -42,8 +42,8 @@
 			<tr >
 				<td width=200 >제품분류</td>
 				<td width=500><select name="goods_sort">
-						<option value="컴퓨터와 인터넷" selected>컴퓨터와 인터넷
-						<option value="디지털 기기">디지털 기기
+						<option value="베스트셀러" selected>베스트셀러
+						<option value="일반">일반
 					</select>
 				</td>
 			</tr>
@@ -103,16 +103,18 @@
 				<td >제품종류</td>
 				<td>
 				<select name="goods_status">
-				  <option value="bestseller"  >베스트셀러</option>
-				  <option value="steadyseller" >스테디셀러</option>
+				<option value="best_homeappliances">베스트 가전</option>
 				  <option value="homeappliances">가전</option>
+				  <option value="best_furniture">베스트 가구</option>
 				  <option value="furniture">가구</option>
+				  <option value="best_kitchen">베스트 주방</option>
 				  <option value="kitchen">주방</option>
+				  <option value="best_housegoods">베스트 생활용품</option>
 				  <option value="housegoods">생활용품</option>
-				  <option value="newbook" selected >신간</option>
+				  <!-- <option value="newbook" selected >신간</option>
 				  <option value="on_sale" >판매중</option>
 				  <option value="buy_out" >품절</option>
-				  <option value="out_of_print" >절판</option>
+				  <option value="out_of_print" >절판</option> -->
 				</select>
 				</td>
 			</tr>
@@ -196,4 +198,3 @@
 </center>	 
 </div>
 </form>	 
-</BODY>

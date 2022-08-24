@@ -38,7 +38,7 @@
 		  select * from (
 			    select rowNum as recNum,t.*
 			       from (
-			              select  *  from t_shoping_member 
+			              select  *  from t_shopping_member 
 			              where to_char(joinDate,'yyyy-mm-dd')  between #{beginDate} and #{endDate}
 			                <if test="search_type=='member_id'">
 			                  AND member_id=#{search_word}

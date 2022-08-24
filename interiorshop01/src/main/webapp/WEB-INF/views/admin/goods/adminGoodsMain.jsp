@@ -199,7 +199,8 @@ function  calcPeriod(search_period){
 				<td>출판사</td>
 				<td>상품가격</td>
 				<td>입고일자</td>
-				<td>출판일</td>
+				<td>&nbsp;출판일</td>
+				<td>&nbsp;&nbsp;삭제</td>
 			</tr>
    <c:choose>
      <c:when test="${empty newGoodsList }">			
@@ -232,13 +233,18 @@ function  calcPeriod(search_period){
 				<td>
 				 <strong>${item.goods_credate }</strong> 
 				</td>
+				
 				<td>
-				    <c:set var="pub_date" value="${item.goods_published_date}" />
+				   &nbsp; <c:set var="pub_date" value="${item.goods_published_date}" />
 					   <c:set var="arr" value="${fn:split(pub_date,' ')}" />
 					<strong>
 					   <c:out value="${arr[0]}" />
 					</strong>
 				</td>
+				<td>
+				  삭제
+				</td>
+				
 				
 			</TR>
 	</c:forEach>

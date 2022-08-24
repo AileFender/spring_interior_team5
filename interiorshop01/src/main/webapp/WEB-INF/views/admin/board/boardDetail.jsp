@@ -21,7 +21,7 @@
 	<TABLE class="list_view">
 		<TR>
 			<TD><strong>${board.boardNO }. </strong></TD>
-			<TD><strong>${board.title }</a></strong></TD>
+			<TD><strong>${board.title }</strong></TD>
 			<TD><strong>${board.content }</strong></TD>
 			<td><strong>${board.writeDate }</strong></td>
 			<%-- <td>
@@ -34,18 +34,21 @@
 		</TR>
 	</TABLE>
 
-	
-			<c:choose>
-				<c:when test="${memberInfo.member_id == 'admin' }">
-								 <a href="${contextPath}/admin/board/modifyBoard.do"
-						class="no-underline"><br>[수정하기]</a>
-						<a href = "${contextPath}/admin/board/removeBoard.do?boardNO=${board.boardNO}" class="no-underline">[삭제하기]</a>
-				</c:when>
-				<c:otherwise>
-				</c:otherwise>
-			</c:choose>
-		
-	
+
+	<c:choose>
+		<c:when test="${memberInfo.member_id == 'admin' }">
+			<a
+				href="${contextPath}/admin/board/modifyBoardForm.do?boardNO=${board.boardNO}"
+				class="no-underline"><br>[수정하기]</a>
+			<a
+				href="${contextPath}/admin/board/removeBoard.do?boardNO=${board.boardNO}"
+				class="no-underline">[삭제하기]</a>
+		</c:when>
+		<c:otherwise>
+		</c:otherwise>
+	</c:choose>
+
+
 
 
 </body>

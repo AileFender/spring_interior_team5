@@ -10,15 +10,15 @@
 
 <div id="ad_main_banner">
 	<ul class="bjqs">	 	
-	  <li><img width="775" height="145" src="${contextPath}/resources/image/main_banner01.jpg"></li>
-		<li><img width="775" height="145" src="${contextPath}/resources/image/main_banner02.jpg"></li>
-		<li><img width="775" height="145" src="${contextPath}/resources/image/main_banner03.jpg"></li> 
+	  <li><a href="https://ohou.se/" target="_blank"><img width="775" height="145" src="${contextPath}/resources/image/banner01.jpg"></a></li>
+		<li><a href="https://zipdoc.co.kr/" target="_blank"><img width="775" height="145" src="${contextPath}/resources/image/banner02.jpg"></a></li>
+		<li><a href="https://houseapp.co.kr/" target="_blank"><img width="775" height="145" src="${contextPath}/resources/image/banner03.jpg"></a></li> 
 	</ul>
 </div>
 <div class="main_book">
    <c:set  var="goods_count" value="0" />
-	<h3>가전</h3>
-	<c:forEach var="item" items="${goodsMap.homeappliances}">
+	<h3>베스트셀러</h3>
+	<c:forEach var="item" items="${goodsMap.best_homeappliances}">
 	   <c:set  var="goods_count" value="${goods_count+1 }" />
 		<div class="book">
 			<a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
@@ -44,10 +44,10 @@
 <div id="ad_sub_banner">
 	<img width="770" height="117" src="${contextPath}/resources/image/sub_banner01.jpg">
 </div>
-<%-- <div class="main_book" >
+ <div class="main_book" >
 <c:set  var="goods_count" value="0" />
-	<h3>새로 출판된 책</h3>
-	<c:forEach var="item" items="${goodsMap.newbook }" >
+	<h3>판매중</h3>
+	<c:forEach var="item" items="${goodsMap.homeappliances }" >
 	   <c:set  var="goods_count" value="${goods_count+1 }" />
 		<div class="book">
 		  <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
@@ -67,7 +67,7 @@
      </div>
    </c:if>
 	</c:forEach>
-</div> --%>
+</div> 
 
 <%-- <div class="clear"></div>
 <div id="ad_sub_banner">
@@ -75,10 +75,10 @@
 </div> --%>
 
 
-<%-- <div class="main_book" >
+<%--  <div class="main_book" >
 <c:set  var="goods_count" value="0" />
-	<h3>스테디셀러</h3>
-	<c:forEach var="item" items="${goodsMap.steadyseller }" >
+	<h3>판매중</h3>
+	<c:forEach var="item" items="${goodsMap.homeappliances }" >
 	   <c:set  var="goods_count" value="${goods_count+1 }" />
 		<div class="book">
 		  <a href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id }">
@@ -98,7 +98,7 @@
      </div>
    </c:if>
 	</c:forEach>
-</div> --%>
+</div>  --%>
 
    
    

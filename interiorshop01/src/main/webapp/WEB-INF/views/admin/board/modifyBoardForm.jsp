@@ -12,39 +12,39 @@
 </script>
 </head>
 <body>
-	<H3>공지사항 상세보기</H3>
-	<form method="post">
-
-		<DIV class="clear"></DIV>
-	</form>
-	<DIV class="clear"></DIV>
-	<TABLE class="list_view">
-		<TR>
-			<TD><strong>${board.boardNO }. </strong></TD>
-			<TD><strong>${board.title }</a></strong></TD>
-			<TD><strong>${board.content }</strong></TD>
-			<td><strong>${board.writeDate }</strong></td>
-			<%-- <td>
-				    <c:set var="pub_date" value="${item.goods_published_date}" />
-					   <c:set var="arr" value="${fn:split(pub_date,' ')}" />
-					<strong>
-					   <c:out value="${arr[0]}" />
-					</strong>
-				</td>	 --%>
-		</TR>
-	</TABLE>
-
 	
-			<c:choose>
-				<c:when test="${memberInfo.member_id == 'admin' }">
-								 <a href="${contextPath}/admin/board/modifyBoard.do"
-						class="no-underline"><br>[수정하기]</a>
-						<a href = "${contextPath}/admin/board/removeBoard.do" class="no-underline">[삭제하기]</a>
-				</c:when>
-				<c:otherwise>
-				</c:otherwise>
-			</c:choose>
+	<form action="${contextPath}/admin/board/modifyBoard.do" method="post"
+		enctype="multipart/form-data">
+		<H3>공지사항 수정</H3>
+		<table>
+			
 		
+			<tr>
+				<td>번호</td>
+				<td><input name="boardNO" type="text" size="40" 
+				value='<c:out value="${board.boardNO }"/>'	readonly="readonly"/></td>
+			</tr>
+
+			<tr>
+				<td>제목</td>
+				<td><input name="title" type="text" size="40" 
+				value = "${board.title }"/></td>
+			</tr>
+			<tr>
+				<td>내용</td>
+				<td><input name="content" type="text" size="40" 
+				value = "${board.content }"/></td>
+			</tr>
+			<tr>
+				<td>작성일자</td>
+				<td><input name="content" type="text" size="40" 
+				value = "${board.writeDate }"	readonly="readonly"/></td>
+			</tr>
+		</table>
+		<td align=center><input type="submit" value="수정하기"></td>
+	</form>
+
+
 	
 
 

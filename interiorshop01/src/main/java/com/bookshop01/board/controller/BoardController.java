@@ -19,5 +19,5 @@ public interface BoardController {
 	
 	public ModelAndView addBoard(@ModelAttribute("board") BoardVO board,HttpServletRequest request)throws Exception;
 	
-	public ModelAndView modifyBoard(HttpServletRequest request)throws Exception;
+	public ModelAndView modifyBoard(@ModelAttribute("board") BoardVO board,HttpServletRequest request)throws Exception;
 }

@@ -73,17 +73,17 @@ function goodsDetail(){
 <body>    
     <div id="sticky" >
 	<ul>
-		<li><a href="#">
-		   <img	width="24" height="24" src="${contextPath}/resources/image/facebook_icon.png">
-				페이스북
+		<li><a href="https://ohou.se/" target="_blank">
+		   <img	width="24" height="24" src="${contextPath}/resources/image/todayhome_icon.jpg">
+				오늘의집
 		</a></li>
-		<li><a href="#">
-		   <img width="24" height="24" src="${contextPath}/resources/image/twitter_icon.png">
-			트위터
+		<li><a href="https://zipdoc.co.kr/" target="_blank">
+		   <img width="24" height="24" src="${contextPath}/resources/image/homedoc_icon.jpg">
+			집닥
 		</a></li>
-		<li><a href="#">
-		   <img	width="24" height="24" src="${contextPath}/resources/image/rss_icon.png">
-				RSS 피드
+		<li><a href="https://houseapp.co.kr/" target="_blank">
+		   <img	width="24" height="24" src="${contextPath}/resources/image/houseapp_icon.jpg">
+				하우스앱
 		 </a></li>
 	</ul>
 	<div class="recent">

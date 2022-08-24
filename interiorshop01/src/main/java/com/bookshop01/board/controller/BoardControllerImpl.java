@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -55,6 +56,7 @@ public class BoardControllerImpl implements BoardController{
 			String viewName = (String)request.getAttribute("viewName");
 			System.out.println(viewName);
 			ModelAndView mav = new ModelAndView(viewName);
+			mav.addObject("board", boardVO);
 			return mav;	
 		}
 	
@@ -81,10 +83,12 @@ public class BoardControllerImpl implements BoardController{
 	
 	//공지사항 수정
 	@Override
-	@RequestMapping(value = "admin/board/modifyBoard.do" , method = RequestMethod.GET)
-	public ModelAndView modifyBoard(HttpServletRequest request) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	@RequestMapping(value = "admin/board/modifyBoard.do" , method = RequestMethod.POST)
+	public ModelAndView modifyBoard(@ModelAttribute("board") BoardVO board,HttpServletRequest request) throws Exception {
+		
+		int result = boardService.modifyBoard(board);
+		ModelAndView mav = new ModelAndView("redirect:/admin/board/adminBoardMain.do");
+		return mav;
 	}
 
 

@@ -31,7 +31,8 @@ public class GoodsControllerImpl extends BaseController   implements GoodsContro
 	
 	@Autowired
 	private BoardService boardService;
-
+	
+	
 	
 	@RequestMapping(value="/goodsDetail.do" ,method = RequestMethod.GET)
 	public ModelAndView goodsDetail(@RequestParam("goods_id") String goods_id,
